@@ -34,4 +34,4 @@ def pop(stack):
     
 #Display stack
 def displayStack(stack):
-    return print("Result of stack: ", stack)
+    return stack
