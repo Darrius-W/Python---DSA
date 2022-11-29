@@ -2,16 +2,16 @@ import stackOP
 import time
 
 def userInput():
-    num = None
+    num = 1
     # Collect User num
     try:
         num = int(input())
         
-        if (num > 4) or (num < 1):
-            raise ValueError("***Erorr Invalid Input***\n")
+        if not num in range(1,4):
+            print("*** ERROR: Input range 1-4 ***\n")
 
-    except ValueError as ve:
-        print(ve)
+    except:
+        print("*** Error Invalid Input! ***\n")
 
     return num
         
