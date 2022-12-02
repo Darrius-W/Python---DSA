@@ -29,4 +29,9 @@ class Queue:
             self.queue.append(value)
 
     # Remove element from queue
+    def dequeue(self):
+        if Queue.isEmpty(self.queue): # check if queue is empty
+            pass
+        else:
+            self.queue.pop()
     # Display queue
