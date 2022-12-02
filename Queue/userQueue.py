@@ -2,11 +2,11 @@ import queueOP
 
 # Create Queue
 userQueue = queueOP.Queue()
-op = None
+op = queueInput = None
 
-print("New Queue has been created.\n")
+print("New Queue has been created.")
 # While loop
-while op is not 4:
+while op != 4:
     # Display user operations
     print("---------------------------\nSelect an Option:\n")
     print("1. Add to Queue.\n2. Remove from Queue.\n3. Display Queue\n4. Exit\n")
@@ -14,12 +14,17 @@ while op is not 4:
     
     # Request user operation input
     try:
-        op = input(range(1,4))
+        op = input()
     except:
         print("*** Error Invalid Input! ***\n")
         pass
     # Match user choice with selectecd operation and perform operation
+    match op:
         # Enqueue
+        case 1:
+            queueInput = int(input("Enter value to input to Queue: "))
+            queueOP.enqueue(queueInput)
+            pass
         # Dequeue
         # Display Queue
         # Exit
