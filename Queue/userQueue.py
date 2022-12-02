@@ -26,5 +26,8 @@ while op != 4:
             queueOP.enqueue(queueInput)
             pass
         # Dequeue
+        case 2:
+            queueOP.dequeue()
+            pass
         # Display Queue
         # Exit
