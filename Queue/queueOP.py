@@ -1,6 +1,6 @@
 maxSize = 8 # max size of queue
 
-## Queue Class
+# Queue Class
 class Queue:
     # Initialize queue
     def __init__(self):
@@ -12,6 +12,11 @@ class Queue:
             return True
         return False
     # Check if queue empty
+    def isEmpty(self):
+        if len(self.queue) == -1:
+            print("Queue is Empty!\n")
+            return True
+        return False
     # Add element into queue
     # Remove element from queue
     # Display queue
