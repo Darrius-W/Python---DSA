@@ -9,7 +9,7 @@ class Queue:
 
     # Check if queue full
     def isFull(self):
-        if len(self.queue) >= 8:
+        if len(self.queue) >= maxSize:
             print("Queue is Full!\n")
             return True
         return False
