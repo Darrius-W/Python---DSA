@@ -34,4 +34,8 @@ class Queue:
             pass
         else:
             self.queue.pop()
+            
     # Display queue
+    def display(self):
+        print("Queue: ", self.queue)
+        return
