@@ -1,6 +1,6 @@
 maxSize = 8 # max size of queue
 
-# Queue Class
+## Queue Class
 class Queue:
     # Initialize queue
     def __init__(self):
