@@ -30,4 +30,7 @@ while op != 4:
             userQueue.dequeue()
             pass
         # Display Queue
+        case 3:
+            userQueue.display()
+            pass
         # Exit

@@ -37,5 +37,5 @@ class Queue:
             
     # Display queue
     def display(self):
-        print("Queue: ", self.queue)
+        print("\nQueue: ", self.queue)
         return
