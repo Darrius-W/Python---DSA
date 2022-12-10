@@ -9,7 +9,7 @@ class Queue:
 
     # Check if queue full
     def isFull(self):
-        if len(self.queue) >= maxSize:
+        if len(self) >= maxSize:
             print("Queue is Full!\n")
             return True
         return False
@@ -23,14 +23,14 @@ class Queue:
 
     # Add element into queue
     def enqueue(self, value):
-        if Queue.isFull(self.queue): # check if que is full
+        if Queue.isFull(self.queue): # check if queue is full
             pass
         else:
             self.queue.append(value)
 
     # Remove element from queue
     def dequeue(self):
-        if Queue.isEmpty(self.queue): # check if queue is empty
+        if Queue.isEmpty(self): # check if queue is empty
             pass
         else:
             self.queue.pop()

@@ -14,7 +14,7 @@ while op != 4:
     
     # Request user operation input
     try:
-        op = input()
+        op = int(input())
     except:
         print("*** Error Invalid Input! ***\n")
         pass
@@ -23,11 +23,11 @@ while op != 4:
         # Enqueue
         case 1:
             queueInput = int(input("Enter value to input to Queue: "))
-            queueOP.enqueue(queueInput)
+            userQueue.enqueue(queueInput)
             pass
         # Dequeue
         case 2:
-            queueOP.dequeue()
+            userQueue.dequeue()
             pass
         # Display Queue
         # Exit
