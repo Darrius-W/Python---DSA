@@ -34,3 +34,6 @@ while op != 4:
             userQueue.display()
             pass
         # Exit
+        case 4:
+            print("Goodbye!\n")
+            exit(-1)
