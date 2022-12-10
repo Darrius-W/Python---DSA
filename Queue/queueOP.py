@@ -21,7 +21,7 @@ class Queue:
             print("Queue is Empty!\n")
             pass
         else:
-            self.queue.pop()
+            self.queue.pop(0)
             
     # Display queue
     def display(self):
