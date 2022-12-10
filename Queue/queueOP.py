@@ -14,13 +14,6 @@ class Queue:
             return True
         return False
 
-    # Check if queue empty
-    def isEmpty(self):
-        if len(self.queue) == -1:
-            print("Queue is Empty!\n")
-            return True
-        return False
-
     # Add element into queue
     def enqueue(self, value):
         if Queue.isFull(self.queue): # check if queue is full
@@ -30,7 +23,8 @@ class Queue:
 
     # Remove element from queue
     def dequeue(self):
-        if Queue.isEmpty(self): # check if queue is empty
+        if len(self.queue) < 1: # check if queue is empty
+            print("Queue is Empty!\n")
             pass
         else:
             self.queue.pop()
