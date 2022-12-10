@@ -7,16 +7,10 @@ class Queue:
     def __init__(self):
         self.queue = []
 
-    # Check if queue full
-    def isFull(self):
-        if len(self) >= maxSize:
-            print("Queue is Full!\n")
-            return True
-        return False
-
     # Add element into queue
     def enqueue(self, value):
-        if Queue.isFull(self.queue): # check if queue is full
+        if len(self.queue) >= maxSize: # check if queue is full
+            print("Queue is Full!\n")
             pass
         else:
             self.queue.append(value)
