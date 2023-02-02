@@ -1,5 +1,5 @@
 import menuOperations as menuOP
-import Stack.stackOP as stack
+import DataStructures.Stack.stackOP as stack
 
 #Create menu obj
 menuObj = menuOP.Menu()
