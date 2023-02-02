@@ -29,6 +29,10 @@ while True:
         
         case 3:
             stackObj.display()
-    
-        case default:
+            
+        case 4:
             menuObj.exitMenu()
+    
+        case _:
+            print("\nInvalid Input!")
+            pass
