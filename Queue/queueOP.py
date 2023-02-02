@@ -1,7 +1,7 @@
-maxSize = 8 # max size of queue
-
 # Queue Class
 class Queue:
+
+    maxSize = 8 # max size of queue
 
     # Initialize queue
     def __init__(self):
@@ -9,7 +9,7 @@ class Queue:
 
     # Add element into queue
     def enqueue(self, value):
-        if len(self.queue) >= maxSize: # check if queue is full
+        if len(self.queue) >= self.maxSize: # check if queue is full
             print("\nQueue is Full!")
             pass
         else:

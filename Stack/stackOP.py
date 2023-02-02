@@ -1,37 +1,42 @@
 #implementation of a stack in python
 
-import time
+class Stack:
+    stackMax = 8
 
-stackMax = 10
+    #Initialize Stack
+    def __init__(self):
+        self.stack = []
 
-#Create stack
-def createStack():
-    stack = []
-    return (stack)
+    #Check if stack full
+    def checkFull(self):
+        if len(self.stack) == self.stackMax:
+            print("Stack is Full!")
+            return True
+        else:
+            return False
+            
+    #Push to stack
+    def push(self, item):
+        if self.checkFull():
+            pass
+        else:
+            self.stack.append(item)
+            print("Following item added to stack: ", item)
+        
+    #Check if stack empty
+    def checkEmpty(self):
+        if len(self.stack) == 0:
+            print("\nStack is empty!\n")
+            return True
+        else: return False
     
-#Check if stack empty
-def checkEmpty(stack):
-    if len(stack) == 0:
-        return ("Stack is empty!\n")
+    #Pop from stack
+    def pop(self):
+        if self.checkEmpty():
+            pass
+        else:
+            self.stack.pop()
     
-
-#Check if stack full
-def checkFull(stack):
-    if len(stack) == stackMax:
-        return ("Stack is Full!")
-    
-#Push to stack
-def push(stack, item):
-    stack.append(item)
-    print("Following item added to stack: ", item)
-    
-#Pop from stack
-def pop(stack):
-    if checkEmpty(stack):
-        return ("Stack is empty!\n")
-    
-    stack.pop()
-    
-#Display stack
-def displayStack(stack):
-    return stack
+    #Display stack
+    def display(self):
+        print("\n", self.stack)
