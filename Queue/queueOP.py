@@ -10,7 +10,7 @@ class Queue:
     # Add element into queue
     def enqueue(self, value):
         if len(self.queue) >= maxSize: # check if queue is full
-            print("Queue is Full!\n")
+            print("\nQueue is Full!")
             pass
         else:
             self.queue.append(value)
@@ -18,7 +18,7 @@ class Queue:
     # Remove element from queue
     def dequeue(self):
         if len(self.queue) < 1: # check if queue is empty
-            print("Queue is Empty!\n")
+            print("\nQueue is Empty!")
             pass
         else:
             self.queue.pop(0)

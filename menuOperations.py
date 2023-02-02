@@ -48,61 +48,39 @@ while i < len(lst):
 class Menu:
     def __init__(self):
         self.funcCount = 0
-        self.menu = list()
+        self.menuLst = []
     
     def exitMenu(self):
-            print("Goodbye!\n")
+            print("\nGoodbye!\n")
             exit(-1)
         
     def addMenuOp(self, str):
         #Remove Exit function if its the last func in list
         if self.funcCount >= 2:
-            self.menu.pop()
+            self.menuLst.pop()
+            self.menuLst.pop()
             self.funcCount-=1
-        
         
         #Add user func
         self.funcCount+=1
-        self.menu.append(str)
+        self.menuLst+=(self.funcCount, str)
         
         #Exit as the last func
         self.funcCount+=1
-        self.menu.append("Exit")
+        self.menuLst+=[self.funcCount, "Exit"]
 
    
     
     def displayMenu(self):
-        '''if len(menu)  == 0:
-            raise Exception("ERROR: No Options to Display\n")
-            exit(-1)
-        '''
-            
         print("\nSelect an Option:\n---------------------------")
         index = 0
-        for menuOp in self.menu:
+        while index < len(self.menuLst):
+            if index % 2 == 0:
+                print("%i. %s" % (self.menuLst[index], self.menuLst[index+1]))
             index+=1
-            print("%d. %s" % (index, menuOp))
-
-
-#Main
-def add(x, y):
-    sum = x + y
-    return sum
-
-#Create menu obj
-menuObj = Menu()
-
-'''
-Add option to menu; args(string).
-Menu obj should increase by 1 every time a Option gets added to menu.
-Attach a function to an option
-Adds exit option after first menu option added
-'''
-menuObj.addMenuOp("Add")
-menuObj.addMenuOp("Add")
-menuObj.addMenuOp("Add")
-print(menuObj.funcCount)
-menuObj.displayMenu()
-
-#Ask user for input
-userOp = int(input("Option: "))
+    
+         
+            
+    def requestInput(self):
+        userOp = int(input("\nOption: "))
+        return userOp
