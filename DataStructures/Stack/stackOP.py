@@ -1,4 +1,10 @@
-#implementation of a stack in python
+# Stack Class - Last In First Out(LIFO) structure
+# is a Linear data structure
+'''
+Exmaple: a stack of books, you have to remove the
+each book on top before you can access the book
+on the bottom.
+'''
 
 class Stack:
     stackMax = 8

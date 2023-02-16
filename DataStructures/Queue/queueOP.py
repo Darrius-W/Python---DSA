@@ -1,4 +1,13 @@
-# Queue Class
+# Queue Class - First In First Out(FIFO) structure
+# a Linear data structure
+'''
+Example: a line of people at the bank. The
+bank teller will service the first person 
+in line, then they will leave the line and
+the next person in line will be serviced.
+All while people are entering the back of
+the line.
+'''
 class Queue:
 
     maxSize = 8 # max size of queue

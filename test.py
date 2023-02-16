@@ -1,13 +1,13 @@
 import menuOperations as menuOP
-import DataStructures.Stack.stackOP as stack
+import DataStructures.Queue.queueOP as queue
 
 #Create menu obj
 menuObj = menuOP.Menu()
-stackObj = stack.Stack()
+queueObj = queue.Queue()
 
 #Menu Options
-menuObj.addMenuOp("Push to Stack")
-menuObj.addMenuOp("Pop Stack")
+menuObj.addMenuOp("Push to queue")
+menuObj.addMenuOp("Pop queue")
 menuObj.addMenuOp("Display")
 
 while True:
@@ -22,13 +22,13 @@ while True:
     match userInput:
         case 1:
             val = int(input("\nEnter integer value: "))
-            stackObj.push(val)
+            queueObj.enqueue(val)
     
         case 2:
-            stackObj.pop()
+            queueObj.dequeue()
         
         case 3:
-            stackObj.display()
+            queueObj.display()
             
         case 4:
             menuObj.exitMenu()
